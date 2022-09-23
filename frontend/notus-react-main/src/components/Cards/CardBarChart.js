@@ -1,42 +1,41 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import Chart from "chart.js";
 
-export default function CardBarChart() {
+export default function CardBarChart(props) {
+
+  let [labels,setLabels]=useState([])
+  let [count,setCount]=useState([])
+
+  useEffect(() => {
+    labels=[]
+    count=[]
+    fetch(`http://localhost:4000/noc-api/number/${props.yrs.f}-${props.yrs.s}`)
+    .then(response => response.json())
+    .then(data => {
+      for(var i=0;i<data.length;i++){
+        labels.push(Object.keys(data[i])[0])
+        count.push(+Object.values(data[i])[0])
+      }
+      setLabels([...labels])
+      setCount([...count])
+    })
+    .catch(err=>console.log(err))
+  },[props])
+
   React.useEffect(() => {
     let config = {
       type: "bar",
       data: {
-        labels: [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
-          "August",
-          "September",
-          "October",
-          "November",
-          "December"
-        ],
+        labels: labels,
         datasets: [
           {
-            label: new Date().getFullYear(),
+            label: "Count",
             backgroundColor: "#ed64a6",
             borderColor: "#ed64a6",
-            data: [30, 78, 56, 34, 100, 45, 13, 52, 32, 25, 78, 43],
+            data: count,
             fill: false,
             barThickness: 8,
-          },
-          {
-            label: new Date().getFullYear() - 1,
-            fill: false,
-            backgroundColor: "#4c51bf",
-            borderColor: "#4c51bf",
-            data: [27, 68, 86, 74, 10, 4, 87, 78, 56, 34, 100, 45],
-            barThickness: 8,
-          },
+          }
         ],
       },
       options: {
@@ -102,7 +101,7 @@ export default function CardBarChart() {
     };
     let ctx = document.getElementById("bar-chart").getContext("2d");
     window.myBar = new Chart(ctx, config);
-  }, []);
+  }, [count]);
   return (
     <>
       <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
@@ -110,10 +109,10 @@ export default function CardBarChart() {
           <div className="flex flex-wrap items-center">
             <div className="relative w-full max-w-full flex-grow flex-1">
               <h6 className="uppercase text-blueGray-400 mb-1 text-xs font-semibold">
-                Performance
+                Year wise count
               </h6>
               <h2 className="text-blueGray-700 text-xl font-semibold">
-                DATA SUBMITTED
+                Bar plot
               </h2>
             </div>
           </div>

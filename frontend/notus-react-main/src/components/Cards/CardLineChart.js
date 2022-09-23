@@ -1,36 +1,40 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
 import Chart from "chart.js";
 
 export default function CardLineChart(props) {
-  console.log(props.yrs)
+
+  let [labels,setLabels]=useState([])
+  let [count,setCount]=useState([])
+
+  useEffect(() => {
+    labels=[]
+    count=[]
+    fetch(`http://localhost:4000/noc-api/number/${props.yrs.f}-${props.yrs.s}`)
+    .then(response => response.json())
+    .then(data => {
+      for(var i=0;i<data.length;i++){
+        labels.push(Object.keys(data[i])[0])
+        count.push(+Object.values(data[i])[0])
+      }
+      setLabels([...labels])
+      setCount([...count])
+    })
+    .catch(err=>console.log(err))
+  },[props])
+
   React.useEffect(() => {
     var config = {
       type: "line",
       data: {
-        labels: [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
-        ],
+        labels: labels,
         datasets: [
           {
-            label: new Date().getFullYear(),
+            label: "Count",
             backgroundColor: "#4c51bf",
             borderColor: "#4c51bf",
-            data: [250, 255, 260, 270, 280, 290, 300],
+            data: count,
             fill: false,
-          },
-          {
-            label: new Date().getFullYear() - 2,
-            fill: false,
-            backgroundColor: "#fff",
-            borderColor: "#fff",
-            data: [310, 320, 350, 390, 400, 410, 430],
-          },
+          }
         ],
       },
       options: {
@@ -106,7 +110,7 @@ export default function CardLineChart(props) {
     };
     var ctx = document.getElementById("line-chart").getContext("2d");
     window.myLine = new Chart(ctx, config);
-  }, []);
+  }, [count]);
   return (
     <>
       <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-blueGray-700">
@@ -114,7 +118,7 @@ export default function CardLineChart(props) {
           <div className="flex flex-wrap items-center">
             <div className="relative w-full max-w-full flex-grow flex-1">
               <h6 className="uppercase text-blueGray-100 mb-1 text-xs font-semibold">
-                TEACHERS IMPACTED
+                Analysing meteoroids
               </h6>
               <h2 className="text-white text-xl font-semibold"></h2>
             </div>

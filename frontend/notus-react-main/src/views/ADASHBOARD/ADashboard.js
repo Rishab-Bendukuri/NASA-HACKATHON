@@ -6,6 +6,7 @@ import CardLineChart from "components/Cards/CardLineChart.js";
 import CardBarChart from "components/Cards/CardBarChart.js";
 import CardPageVisits from "components/Cards/CardPageVisits.js";
 import CardSocialTraffic from "components/Cards/CardSocialTraffic.js";
+import PiePlot from "components/Charts/PiePlot";
 
 
 export default function ADashboard() {
@@ -58,7 +59,11 @@ export default function ADashboard() {
           </div>
         </div>
         <div className="w-full xl:w-4/12 px-4">
-          <CardBarChart />
+          <CardBarChart yrs={{f: first,s:second}} />
+        </div>
+
+        <div className="w-full xl:w-4/12 px-4 pt-3">
+          <PiePlot/>
         </div>
       </div>
      

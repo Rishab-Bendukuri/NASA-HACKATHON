@@ -5,7 +5,7 @@ import React from "react";
 import CardStats from "components/Cards/CardStats.js";
 
 export default function HeaderStats() {
-  let x = 125;
+  let x = 31967;
   return (
     <>
       {/* Header */}
@@ -16,36 +16,36 @@ export default function HeaderStats() {
             <div className="flex flex-wrap">
               <div className="w-full lg:w-6/12 xl:w-4/12 px-4">
                 <CardStats
-                  statSubtitle="Teacher Assistants"
+                  statSubtitle="Total No. of valid meteoroids"
                   statTitle={x}
                   statArrow="up"
-                  statPercent="1.28"
+                  statPercent="3.28"
                   statPercentColor="text-emerald-500"
-                  statDescripiron="Since last month"
+                  statDescripiron="Based on last 30 years"
                   statIconName="far fa-chart-bar"
                   statIconColor="bg-red-500"
                 />
               </div>
               <div className="w-full lg:w-6/12 xl:w-4/12 px-4">
                 <CardStats
-                  statSubtitle="Total Institutions"
-                  statTitle="850"
+                  statSubtitle="Total No. of relict meteoroids"
+                  statTitle="69"
                   statArrow="up"
-                  statPercent="3.48"
+                  statPercent="3.28"
                   statPercentColor="text-emerald-500"
-                  statDescripiron="Since last month"
-                  statIconName="fas fa-school"
+                  statDescripiron="Based on last 30 years"
+                  statIconName="fas fa-ban"
                   statIconColor="bg-orange-500"
                 />
               </div>
               <div className="w-full lg:w-6/12 xl:w-4/12 px-4">
                 <CardStats
-                  statSubtitle="Students Affected"
-                  statTitle="5400"
+                  statSubtitle="percentage of chondrites"
+                  statTitle="72%"
                   statArrow="up"
-                  statPercent="1.10"
+                  statPercent="3.28"
                   statPercentColor="text-emerald-500"
-                  statDescripiron="Since 2020"
+                  statDescripiron="Based on last 30 years"
                   statIconName="fas fa-users"
                   statIconColor="bg-pink-500"
                 />

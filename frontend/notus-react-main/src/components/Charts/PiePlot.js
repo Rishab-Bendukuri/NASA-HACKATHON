@@ -7,8 +7,8 @@ export default class PiePlot extends Component {
       <div>
         <Plot
             data={[{
-                values: [25,30,54, 32, 5],
-                labels:['videos','audio','quiz','presentation', 'demo-1'],
+                values: [85.7,14.3],
+                labels:['chondrites','achondrites'],
                 type:'pie'
             }]}
             layout={{width:500,height:500,title:'piechart'}}
