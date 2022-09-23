@@ -16,17 +16,17 @@ export default function Index() {
         <div className="col-sm-8">
           <div className="pt-32 sm:pt-0">
               <h2 className="font-semibold text-4xl text-blueGray-600">
-                WHAT IS THE NGO ABOUT?
+                What our website is about?
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-                 Our mission is to support children & youth from underprivileged families through different education based interventions to rise above the poverty line and lead a life of dignity through sustainable processes.
+                 It provides entire information about meteoroids and its co-ordinates. It can be used to track their locations. It also provides us with the information on the pattern of the meteoroids falling towards earth. It also warns when a dangerous asteroid is on a collision course towards earth. It is also helpful for various researchers to gain more insight on the meteoroids such as their size, location.
               </p>
               
           </div>
         </div>
-        <div className="col-sm-12 pt-32 text-center">
+        {/* <div className="col-sm-12 pt-32 text-center">
         <ImageSlider slides={SliderData}></ImageSlider>
-        </div>
+        </div> */}
       </div>
         
       
