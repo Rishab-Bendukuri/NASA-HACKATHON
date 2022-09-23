@@ -31,10 +31,10 @@ export default function Navbar(props) {
           >
             <ul className="flex flex-col lg:flex-row list-none mr-auto">
               <li className="flex items-center">
-                <img style={{ width: '200px' }}
+                <img style={{ width: '80px' }}
                   alt="..."
                   className="w-full rounded-full align-middle border-none shadow-lg"
-                  src={require("assets/img/kotak-logo.png").default}
+                  src={require("assets/img/meteroids_world_pic.png").default}
                 />
               </li>
             </ul>
