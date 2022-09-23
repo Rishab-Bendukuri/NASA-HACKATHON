@@ -1,7 +1,8 @@
 import React from "react";
 import Chart from "chart.js";
 
-export default function CardLineChart() {
+export default function CardLineChart(props) {
+  console.log(props.yrs)
   React.useEffect(() => {
     var config = {
       type: "line",

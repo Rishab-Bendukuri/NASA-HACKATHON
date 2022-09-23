@@ -14,8 +14,8 @@ export default function ADashboard() {
     return Array(end - start + 1).fill().map((_, idx) => start + idx)
   }
   var yrs = range(860,2016);
-  let [first,setFirst]=useState("")
-  let [second,setSecond]=useState("")
+  let [first,setFirst]=useState("860")
+  let [second,setSecond]=useState("2016")
   function handlefirst(event){
     setFirst(event.target.value)
   }
@@ -28,28 +28,31 @@ export default function ADashboard() {
     <ASidebar />
       <div className="flex flex-wrap">
         <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
-          <CardLineChart />
-
+          <CardLineChart yrs={{f: first,s:second}} />
           <div className="d-flex">
             <div className="col col-md-3">
               <label htmlFor="from">From: </label><br/>
               <select name="from" id="from" onChange={handlefirst} >
+                <option value="860" defaultValue>860</option>
                 {
-                  yrs.map((v)=>
-                    <option value={v}>{v}</option>
+                  yrs.map((v,i)=>
+                    <option key={i} value={v}>{v}</option>
                   )
                 }
+                <option value="2016">2016</option>
               </select>
             </div>
 
             <div className="col col-md-3">
               <label htmlFor="to">To: </label><br/>
-              <select name="to" id="to" onChange={handlesecond} >
+              <select name="to" id="to" onChange={handlesecond} defaultValue="2016" >
+                <option value="860">860</option>
                 {
-                  yrs.map((v)=>
-                    <option value={v}>{v}</option>
+                  yrs.map((v,i)=>
+                    <option key={i} value={v}>{v}</option>
                   )
                 }
+                <option value="2016">2016</option>
               </select>
             </div>
           </div>
