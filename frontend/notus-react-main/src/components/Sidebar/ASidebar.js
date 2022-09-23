@@ -1,6 +1,9 @@
 /*eslint-disable*/
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "../../assets/img/meteroids_world_pic2.png"
+
+import "./sidebar.css"
 
 import NotificationDropdown from "components/Dropdowns/NotificationDropdown.js";
 import UserDropdown from "components/Dropdowns/UserDropdown.js";
@@ -24,7 +27,7 @@ export default function ASidebar() {
             className="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
             to="/"
           >
-            Kotak education foundation
+            <img className="asblogo" src={Logo} alt="logo" />
           </Link>
           {/* User */}
           <ul className="md:hidden items-center flex flex-wrap list-none">
@@ -79,7 +82,7 @@ export default function ASidebar() {
             <hr className="my-4 md:min-w-full" />
             {/* Heading */}
             <h6 className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
-              Kotak Admin Panel
+              Panel
             </h6>
             {/* Navigation */}
 

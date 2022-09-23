@@ -9,11 +9,11 @@ import { SliderData } from "components/Slider/SliderData";
 import './Index-marquee.css'
 export default function Index() {
   return (
-    <div className="bg-img">
+    <div className="">
       <IndexNavbar fixed />
 
-      <div className="container row pt-32 ">
-        <div className="col-sm-8">
+      <div className="row pt-32 bg-img d-flex aign-items-center justify-content-center">
+        <div className="col-sm-8 d-flex align-items-center">
           <div className="pt-32 sm:pt-0">
               <h2 className="font-semibold text-4xl text-white">
                 What our website is about?
