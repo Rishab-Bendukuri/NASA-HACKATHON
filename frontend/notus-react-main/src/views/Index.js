@@ -24,18 +24,10 @@ export default function Index() {
               
           </div>
         </div>
-        <div className="col-sm-12 pt-32 text-center">
+        {/* <div className="col-sm-12 pt-32 text-center d-block mx-auto">
         <ImageSlider slides={SliderData}></ImageSlider>
-        </div>
-      </div>
-        
-      
-
-      
-
-      
-    
-      
+        </div> */}
+      </div>  
       <Footer />
     </>
   );
