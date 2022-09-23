@@ -33,7 +33,7 @@ export default function Navbar(props) {
               <li className="flex items-center">
                 <img style={{ width: '80px' }}
                   alt="..."
-                  className="w-full rounded-full align-middle border-none shadow-lg"
+                  className="w-full align-middle border-none shadow-lg"
                   src={require("assets/img/meteroids_world_pic2.png").default}
                 />
               </li>
