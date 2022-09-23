@@ -1,12 +1,15 @@
 import React from 'react'
 import "./comets.css"
+import IndexNavbarxt from "components/Navbars/IndexNavbarxt.js";
 // Meteoroid Meteor Meteorite
 
 function Comets() {
   return (
     <div className='h100 bgc'>
+        {/* <div className='cusnav'><IndexNavbarxt/></div> */}
+        
         <div className='row justify-content-center align-items-center'>
-            <div className='col col-md-4 p-3 col-sm-10 col-10 position-relative rounded rounded-5'>
+            <a href='/meteoroids' className='col col-md-4 p-3 col-sm-10 col-10 position-relative rounded rounded-5'>
             <div className="flip-card d-block mx-auto">
                     <div className="flip-card-inner">
                         <div className="flip-card-front">
@@ -24,9 +27,9 @@ function Comets() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div className='col col-md-4 p-3 col-sm-10 col-10 position-relative rounded rounded-5'>
+            <a href='/' className='col col-md-4 p-3 col-sm-10 col-10 position-relative rounded rounded-5'>
                 <div className="flip-card d-block mx-auto">
                         <div className="flip-card-inner">
                             <div className="flip-card-front ">
@@ -43,9 +46,9 @@ function Comets() {
                             </div>
                         </div>
                     </div>
-            </div>
+            </a>
 
-            <div className='col col-md-4 p-3 col-sm-10 col-10 position-relative rounded rounded-5'>
+            <a href='/meteorites'className='col col-md-4 p-3 col-sm-10 col-10 position-relative rounded rounded-5'>
                 <div className="flip-card d-block mx-auto">
                     <div className="flip-card-inner">
                         <div className="flip-card-front">
@@ -62,7 +65,7 @@ function Comets() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
   )

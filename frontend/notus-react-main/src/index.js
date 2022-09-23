@@ -17,7 +17,8 @@ import Profile from "views/Profile.js";
 import Index from "views/Index.js";
 import AdminLogin from "views/Admin_login/Admin_login"
 import Comets from "views/comets/comets.js"
-
+import meteorites from "views/meteorites/meteorites.js"
+import meteoroids from "views/meteoroids/meteoroids.js"
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
@@ -29,6 +30,8 @@ ReactDOM.render(
       <Route path="/landing" exact component={Landing} />
       <Route path="/profile" exact component={Profile} />
       <Route path="/comets" exact component={Comets} />
+      <Route path="/meteoroids" exact component={meteoroids} />
+      <Route path="/meteorites" exact component={meteorites} />
       <Route path="/" exact component={Index} />
       {/* add redirect for first page */}
       <Redirect from="*" to="/" />
