@@ -10,7 +10,7 @@ export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
     <>
-      <nav className="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-white shadow">
+      <nav className="top-z fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-white shadow">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
         
@@ -31,10 +31,10 @@ export default function Navbar(props) {
           >
             <ul className="flex flex-col lg:flex-row list-none mr-auto">
               <li className="flex items-center">
-                <img style={{ width: '200px' }}
+                <img style={{ width: '80px' }}
                   alt="..."
                   className="w-full rounded-full align-middle border-none shadow-lg"
-                  src={require("assets/img/kotak-logo.png").default}
+                  src={require("assets/img/meteroids_world_pic2.png").default}
                 />
               </li>
             </ul>
