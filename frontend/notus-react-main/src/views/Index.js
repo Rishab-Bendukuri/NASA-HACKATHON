@@ -12,7 +12,7 @@ export default function Index() {
     <>
       <IndexNavbar fixed />
 
-      <div className="container row pt-32 pers">
+      <div className="container row pt-32 ">
         <div className="col-sm-8">
           <div className="pt-32 sm:pt-0">
               <h2 className="font-semibold text-4xl text-blueGray-600">
