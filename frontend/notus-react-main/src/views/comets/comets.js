@@ -10,7 +10,7 @@ function Comets() {
             <div className="flip-card d-block mx-auto">
                     <div className="flip-card-inner">
                         <div className="flip-card-front">
-                            <img src="https://static.vecteezy.com/packs/media/vectors/term-bg-1-666de2d9.jpg"/>
+                            <img src="https://www.factsjustforkids.com/wp-content/uploads/meteoroid-facts.png" className='cometimg'/>
                             <p className='ctitle'>
                                 <div className='otext'>
                                 Meteoroid
