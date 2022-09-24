@@ -6,12 +6,14 @@ import Footer from "components/Footers/Footer.js";
 import Carousel from 'react-bootstrap/Carousel';
 import ImageSlider from "components/Slider/ImageSlider";
 import { SliderData } from "components/Slider/SliderData";
+
 import './Index-marquee.css'
+import Chatbot from 'react-chatbot-kit'
 export default function Index() {
   return (
     <div className="">
       <IndexNavbar fixed />
-
+    
       <div className="row pt-32 bg-img d-flex aign-items-center justify-content-center">
         <div className="col-sm-8 d-flex align-items-center">
           <div className="pt-32 sm:pt-0">
@@ -27,6 +29,7 @@ export default function Index() {
         {/* <div className="col-sm-12 pt-32 text-center">
         <ImageSlider slides={SliderData}></ImageSlider>
         </div> */}
+      
       </div>
         
       
@@ -35,7 +38,7 @@ export default function Index() {
 
       
     
-      
+      {/* <Chatbot config={config} actionProvider={ActionProvider} 	    messageParser={MessageParser} /> */}
       <Footer />
     </div>
   );

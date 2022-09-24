@@ -11,7 +11,7 @@ import Admin from "layouts/Admin.js";
 import Auth from "layouts/Auth.js";
 
 // views without layouts
-
+import Chatbot from 'react-chatbot-kit'
 import Landing from "views/Landing.js";
 import Profile from "views/Profile.js";
 import Index from "views/Index.js";
@@ -39,5 +39,6 @@ ReactDOM.render(
       <Redirect from="*" to="/" />
     </Switch>
   </BrowserRouter>,
+  
   document.getElementById("root")
 );
