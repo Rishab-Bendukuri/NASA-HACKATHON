@@ -41,7 +41,11 @@ export default function Navbar(props) {
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
 
               <li className="flex items-center p-3">
-                <a className="no-underline text-black" href="/chonrites">EXPLORE CHONRITES</a>
+                <a className="no-underline text-black" href="/emeteoroids">EXPLORE METEOROIDS ON MAP</a>
+              </li>
+              
+              <li className="flex items-center p-3">
+                <a className="no-underline text-black" href="/chonrites">EXPLORE CHONDRITES</a>
               </li>
 
               <li className="flex items-center p-3">

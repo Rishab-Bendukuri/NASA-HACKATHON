@@ -30,7 +30,7 @@ export default function CardAdTable({ color }) {
                   "font-semibold text-primary"
                 }
               >
-                Teacher Assistant's
+                Users
               </h4>
             </div>
           </div>

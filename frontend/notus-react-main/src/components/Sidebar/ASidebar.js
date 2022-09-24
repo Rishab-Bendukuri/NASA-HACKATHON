@@ -109,7 +109,7 @@ export default function ASidebar() {
                 </Link>
               </li>
 
-              <li className="items-center">
+              {/* <li className="items-center">
                 <Link
                   className={
                     "text-xs uppercase py-3 font-bold block " +
@@ -129,7 +129,7 @@ export default function ASidebar() {
                   ></i>{" "}
                   Locate
                 </Link>
-              </li>
+              </li> */}
 
               <li className="items-center">
                 <Link
@@ -143,13 +143,13 @@ export default function ASidebar() {
                 >
                   <i
                     className={
-                      "fas fa-home mr-2 text-sm " +
+                      "fas fa-user mr-2 text-sm " +
                       (window.location.href.indexOf("/admin/Atables") !== -1
                         ? "opacity-75"
                         : "text-blueGray-300")
                     }
                   ></i>{" "}
-                  Home
+                  Users
                 </Link>
               </li>
 

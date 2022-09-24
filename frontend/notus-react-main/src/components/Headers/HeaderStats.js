@@ -6,7 +6,7 @@ import CardStats from "components/Cards/CardStats.js";
 import Aos from 'aos'
 import "aos/dist/aos.css"
 
-export default function HeaderStats() {
+export default function HeaderStats() {   
 
   useEffect(()=>{
     Aos.init({ duration: 2000 });

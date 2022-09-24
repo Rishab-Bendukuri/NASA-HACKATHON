@@ -9,7 +9,7 @@ import './components/Slider/slider.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import Admin from "layouts/Admin.js";
 import Auth from "layouts/Auth.js";
-
+import Emeteoroids from "views/emeteoroids/emeteoroids";
 // views without layouts
 import Landing from "views/Landing.js";
 import Profile from "views/Profile.js";
@@ -37,6 +37,7 @@ ReactDOM.render(
       <Route path="/meteoroids" exact component={meteoroids} />
       <Route path="/meteorites" exact component={meteorites} />
       <Route path="/ltypechondrites" exact component={ltypechondrites} />
+      <Route path="/emeteoroids" exact component={Emeteoroids} />
       <Route path="/" exact component={Index} />
       {/* add redirect for first page */}
       <Redirect from="*" to="/" />
