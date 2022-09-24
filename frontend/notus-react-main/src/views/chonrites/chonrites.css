@@ -7,3 +7,8 @@
 .cbg{
     background-color: rgba(255, 255, 255, 0.492);
 }
+.chrcus{
+    width: 50%;
+    height: 50%;
+    align-items: center;
+}
