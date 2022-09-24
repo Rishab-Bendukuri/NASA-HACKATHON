@@ -105,7 +105,7 @@ export default function ASidebar() {
                         : "text-blueGray-300")
                     }
                   ></i>{" "}
-                  PERFORMANCE
+                  visualization
                 </Link>
               </li>
 
@@ -127,7 +127,7 @@ export default function ASidebar() {
                         : "text-blueGray-300")
                     }
                   ></i>{" "}
-                  ADD NEW TEACHER ASSISTANT
+                  Locate
                 </Link>
               </li>
 
@@ -143,13 +143,13 @@ export default function ASidebar() {
                 >
                   <i
                     className={
-                      "fas fa-table mr-2 text-sm " +
+                      "fas fa-home mr-2 text-sm " +
                       (window.location.href.indexOf("/admin/Atables") !== -1
                         ? "opacity-75"
                         : "text-blueGray-300")
                     }
                   ></i>{" "}
-                  TEACHER ASSISTANT'S DATA
+                  Home
                 </Link>
               </li>
 

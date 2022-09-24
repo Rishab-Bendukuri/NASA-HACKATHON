@@ -40,12 +40,17 @@ export default function Navbar(props) {
             </ul>
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
 
-              <li className="flex items-center">
+              <li className="flex items-center p-3">
+                <a className="no-underline text-black" href="/chonrites">EXPLORE CHONRITES</a>
+              </li>
+
+              <li className="flex items-center p-3">
                 <a className="no-underline text-black" href="/comets">SPACE ROCKS</a>
               </li>
 
-              <li className="flex items-center">
-                <IndexDropdown />
+              <li className="flex items-center p-3">
+                <a className="no-underline text-black" href="/admin/Adashboard">NAVIGATE</a>
+                {/* <IndexDropdown /> */}
               </li>
               
 

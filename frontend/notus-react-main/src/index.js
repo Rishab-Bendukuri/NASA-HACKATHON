@@ -19,6 +19,7 @@ import AdminLogin from "views/Admin_login/Admin_login"
 import Comets from "views/comets/comets.js"
 import meteorites from "views/meteorites/meteorites.js"
 import meteoroids from "views/meteoroids/meteoroids.js"
+import Chonrites from "views/chonrites/chonrites";
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
@@ -27,6 +28,7 @@ ReactDOM.render(
       <Route path="/adminLogin" component={AdminLogin} />
       <Route path="/auth" component={Auth} />
       {/* add routes without layouts */}
+      <Route path="/chonrites" exact component={Chonrites} />
       <Route path="/landing" exact component={Landing} />
       <Route path="/profile" exact component={Profile} />
       <Route path="/comets" exact component={Comets} />

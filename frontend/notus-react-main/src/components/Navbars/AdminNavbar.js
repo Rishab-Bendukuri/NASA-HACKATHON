@@ -14,7 +14,7 @@ export default function Navbar() {
             href="#pablo"
             onClick={(e) => e.preventDefault()}
           >
-           Welcome To Admin Section
+           Welcome To meteoroids world !
           </a>
           {/* Form */}
         

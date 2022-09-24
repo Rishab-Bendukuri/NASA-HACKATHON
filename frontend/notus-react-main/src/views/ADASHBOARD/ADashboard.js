@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState,useEffect} from "react";
 
 // components
 import ASidebar from "components/Sidebar/ASidebar";
@@ -8,8 +8,14 @@ import CardPageVisits from "components/Cards/CardPageVisits.js";
 import CardSocialTraffic from "components/Cards/CardSocialTraffic.js";
 import PiePlot from "components/Charts/PiePlot";
 
+import Aos from 'aos'
+import "aos/dist/aos.css"
 
 export default function ADashboard() {
+
+  useEffect(()=>{
+    Aos.init({ duration: 2000 });
+  },[]);
 
   function range(start, end) {
     return Array(end - start + 1).fill().map((_, idx) => start + idx)
@@ -25,10 +31,10 @@ export default function ADashboard() {
     setSecond(event.target.value)
   }
   return (
-    <>
+    <div className="bg-success p-3">
     <ASidebar />
       <div className="flex flex-wrap">
-        <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
+        <div data-aos="slide-right" className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
           <CardLineChart yrs={{f: first,s:second}} />
           <div className="d-flex">
             <div className="col col-md-3">
@@ -58,15 +64,15 @@ export default function ADashboard() {
             </div>
           </div>
         </div>
-        <div className="w-full xl:w-4/12 px-4">
+        <div data-aos="slide-left" className="w-full xl:w-4/12 px-4">
           <CardBarChart yrs={{f: first,s:second}} />
         </div>
 
-        <div className="w-full xl:w-4/12 px-4 pt-3">
+        <div data-aos="slide-right" className="w-full xl:w-4/12 px-4 pt-3">
           <PiePlot />
         </div>
       </div>
      
-    </>
+    </div>
   );
 }

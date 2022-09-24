@@ -1,20 +1,27 @@
-import React from "react";
+import React,{useEffect} from "react";
 
 // components
 
 import CardStats from "components/Cards/CardStats.js";
+import Aos from 'aos'
+import "aos/dist/aos.css"
 
 export default function HeaderStats() {
+
+  useEffect(()=>{
+    Aos.init({ duration: 2000 });
+  },[]);
+
   let x = 31967;
   return (
-    <>
+    <div className="bg-primary">
       {/* Header */}
-      <div className="relative bg-lightBlue-600 md:pt-32 pb-32 pt-12">
+      <div className="relative md:pt-32 pb-32 pt-12">
         <div className="px-4 md:px-10 mx-auto w-full">
           <div>
             {/* Card stats */}
             <div className="flex flex-wrap">
-              <div className="w-full lg:w-6/12 xl:w-4/12 px-4">
+              <div data-aos="zoom-in" className="w-full lg:w-6/12 xl:w-4/12 px-4">
                 <CardStats
                   statSubtitle="Total No. of valid meteoroids"
                   statTitle={x}
@@ -26,7 +33,7 @@ export default function HeaderStats() {
                   statIconColor="bg-red-500"
                 />
               </div>
-              <div className="w-full lg:w-6/12 xl:w-4/12 px-4">
+              <div data-aos="zoom-in" className="w-full lg:w-6/12 xl:w-4/12 px-4">
                 <CardStats
                   statSubtitle="Total No. of relict meteoroids"
                   statTitle="69"
@@ -38,7 +45,7 @@ export default function HeaderStats() {
                   statIconColor="bg-orange-500"
                 />
               </div>
-              <div className="w-full lg:w-6/12 xl:w-4/12 px-4">
+              <div data-aos="zoom-in" className="w-full lg:w-6/12 xl:w-4/12 px-4">
                 <CardStats
                   statSubtitle="percentage of chondrites"
                   statTitle="72%"
@@ -55,6 +62,6 @@ export default function HeaderStats() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
