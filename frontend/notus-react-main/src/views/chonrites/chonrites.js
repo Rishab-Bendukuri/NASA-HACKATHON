@@ -36,7 +36,7 @@ function Chonrites() {
             <div className="container row ">
                 <h1 className='text-center text-white'>EXAMPLES</h1>
             <div className="col ">
-                <a className="card" href='/ltypechondrite'>
+                <a className="card" href='/ltypechondrites'>
                     <img src="https://live.staticflickr.com/65535/48165861062_644a9c70fa_b.jpg" className="customcrd" alt="..."/>
                     <div className="card-body">
                         <h5 className="card-title">L type chondrite</h5>

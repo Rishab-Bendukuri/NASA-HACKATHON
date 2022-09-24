@@ -21,7 +21,7 @@ import meteorites from "views/meteorites/meteorites.js"
 import meteoroids from "views/meteoroids/meteoroids.js"
 import Chonrites from "views/chonrites/chonrites";
 import Form from "views/form/form"
-
+import ltypechondrites from "views/chonrites/ltypechonrite.js"
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
@@ -37,6 +37,7 @@ ReactDOM.render(
       <Route path="/comets" exact component={Comets} />
       <Route path="/meteoroids" exact component={meteoroids} />
       <Route path="/meteorites" exact component={meteorites} />
+      <Route path="/ltypechondrites" exact component={ltypechondrites} />
       <Route path="/" exact component={Index} />
       {/* add redirect for first page */}
       <Redirect from="*" to="/" />
