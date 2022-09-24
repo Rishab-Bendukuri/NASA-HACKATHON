@@ -32,6 +32,40 @@ function Chonrites() {
                 <h2 className='h1 text-light text-center'>Types of Chondrites</h2>
                 <img src={chondrites_classi} alt="" className='d-block mx-auto chrcus'/>
             </div>
+            <div data-aos="flip-right" className='d-flex-column p-5 m-5 cbg'>
+            <div className="container row ">
+                <h1 className='text-center text-white'>EXAMPLES</h1>
+            <div className="col ">
+                <a className="card" href='/ltypechondrite'>
+                    <img src="https://live.staticflickr.com/65535/48165861062_644a9c70fa_b.jpg" className="customcrd" alt="..."/>
+                    <div className="card-body">
+                        <h5 className="card-title">L type chondrite</h5>
+                        
+                        
+                    </div>
+                </a>
+            </div>
+            <div className="col">
+                <div className="card">
+                    <img src="https://files.geocollections.info/large/52/2b/522b6b48-e30f-407c-bab6-893439d7900f.jpg" className="customcrd" alt="..."/>
+                    <div className="card-body">
+                        <h5 className="card-title">H type chondrite</h5>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <div className="col">
+                <div className="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuK9Kp9WKNh1OImr1FZGfe8bnJZHZXSiWNkw&usqp=CAU" className="customcrd" alt="..."/>
+                    <div className="card-body">
+                        <h5 className="card-title">LL type chondrite</h5>
+                        
+                    </div>
+                </div>
+            </div>
+                 </div> 
+            </div>
         </div>
     )
 }
