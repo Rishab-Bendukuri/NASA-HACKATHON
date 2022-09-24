@@ -58,14 +58,14 @@ export default function Navbar(props) {
               </li>
               
 
-              <li className="flex items-center">
+              {/* <li className="flex items-center">
                 <button
                   className="bg-lightBlue-500 text-white active:bg-lightBlue-600 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none m-3 ease-linear transition-all duration-150"
                   type="button"
                 >
                   <i className="fas"></i> Login
                 </button>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
